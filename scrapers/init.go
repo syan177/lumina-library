@@ -17,6 +17,7 @@ const (
 	OKEX_EXCHANGE         = "OKEx"
 	MEXC_EXCHANGE         = "MEXC"
 
+	CURVE_EXCHANGE         = "Curve"
 	UNISWAPV2_EXCHANGE     = "UniswapV2"
 	UNISWAPV3_EXCHANGE     = "UniswapV3"
 	PANCAKESWAPV3_EXCHANGE = "PancakeswapV3"
@@ -42,6 +43,7 @@ func init() {
 
 	Exchanges[UNISWAP_SIMULATION] = models.Exchange{Name: UNISWAP_SIMULATION, Centralized: false, Simulation: true, Blockchain: utils.ETHEREUM}
 	Exchanges[UNISWAPV2_EXCHANGE] = models.Exchange{Name: UNISWAPV2_EXCHANGE, Centralized: false, Blockchain: utils.ETHEREUM}
+	Exchanges[CURVE_EXCHANGE] = models.Exchange{Name: CURVE_EXCHANGE, Centralized: false, Blockchain: utils.ETHEREUM}
 
 	log = logrus.New()
 	loglevel, err := logrus.ParseLevel(utils.Getenv("LOG_LEVEL_SCRAPERS", "info"))

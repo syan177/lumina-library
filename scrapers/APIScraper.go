@@ -309,7 +309,8 @@ func RunScraper(
 		NewUniswapV3Scraper(ctx, exchange, utils.ETHEREUM, pools, tradesChannel, wg)
 	case PANCAKESWAPV3_EXCHANGE:
 		NewUniswapV3Scraper(ctx, exchange, utils.BINANCESMARTCHAIN, pools, tradesChannel, wg)
-
+	case CURVE_EXCHANGE:
+		NewCurveScraper(ctx, exchange, utils.ETHEREUM, pools, tradesChannel, wg)
 	}
 }
 
